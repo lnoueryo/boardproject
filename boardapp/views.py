@@ -30,3 +30,4 @@ def loginfunc(request):
     return render(request, 'login.html', {'context': 'get method'})
 
 def listfunc(request):
+    return render(request, 'list.html')
