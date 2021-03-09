@@ -1,11 +1,14 @@
 {% extends 'base.html' %}
-
+{% load static %}
+{% block customcss %}
+<link href="{% static 'style.css' %}" rel="stylesheet">
+{% endblock customcss %}
 {% block content %}
 <body class="text-center">
     <main class="form-signin">
       {{ context }}
       <form method="POST">{% csrf_token %}
-        <img class="mb-4" src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">
+        <img class="mb-4" src="/medi/146206546_230292455307788_1030802293290701267_o.jpg" alt="" width="72" height="57">
         <h1 class="h3 mb-3 fw-normal">ログインする</h1>
         <label for="name" class="visually-hidden">メールアドレス</label>
         <input type="text" id="name" class="form-control" placeholder="名前" name="username" required autofocus>
